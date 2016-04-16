@@ -19,7 +19,11 @@ We often see that high school seniors simply decide to choose business because i
         android:layout_gravity="center"
         android:id="@+id/lin_lay"
         android:gravity="center"
-        android:orientation="vertical" />
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true" />
 
 
 </RelativeLayout>
