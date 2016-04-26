@@ -21,11 +21,15 @@ import android.widget.Toast;
 public class Please extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private WebView Twitter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_please);
+        Twitter = (WebView) findViewById(R.id.webView);
+        Twitter.getSettings().setJavaScriptEnabled(true);
+        Twitter.getSettings().setSaveFormData(true);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
