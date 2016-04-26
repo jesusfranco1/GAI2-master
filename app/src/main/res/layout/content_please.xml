@@ -11,33 +11,15 @@
 
     tools:context=".Please">
 
-    <TextView
-        android:singleLine="false"
-        android:text="
-\t Rising Business Executives Inc. (RBE) was founded with the mission to assist high school students in making the right decision when deciding to pursue further education in the field of business. While a business degree has the ability to be applied across multiple different fields – ranging from Wall Street to corporate to even starting your own small business – sometimes the plethora of opportunities in business can complicate decisions. \n\n
 
-\t Our goal at RBE is to connect with students, by hosting workshops or small-group sessions, and explain, in depth, the various aspects of business – Marketing, Finance, Accounting, Operations, and Entrepreneurship. \n\n
-
-\t We often see that high school seniors simply decide to choose business because it seems interesting and can be applied to many different paths -- however they do not know what those paths are. By partnering with us, students will gain insight into the day-to-day work, both in college and in the corporate world; something that is currently not being taught in high schools. \n\n"
-        android:id="@+id/text"
-        android:layout_height="wrap_content"
+    <WebView
         android:layout_width="wrap_content"
-        android:background="#FFFFFF"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:id="@+id/webView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/scrollView" />
-
-    <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/scrollView"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true" />
 </RelativeLayout>
