@@ -30,6 +30,7 @@ public class Please extends AppCompatActivity
         Twitter = (WebView) findViewById(R.id.webView);
         Twitter.getSettings().setJavaScriptEnabled(true);
         Twitter.getSettings().setSaveFormData(true);
+        Twitter.loadUrl("https://mobile.twitter.com/RBE_2016");
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
