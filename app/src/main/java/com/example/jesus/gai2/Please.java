@@ -82,12 +82,12 @@ public class Please extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_twitter) {
+//        if (id == R.id.nav_twitter) {
 //            Uri uri = Uri.parse("http://www.example.com");
 //            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
 //            startActivity(intent);
-              WebView twiter = new WebView(this);
-              setContentView(twiter);
+//              WebView twiter = new WebView(this);
+//              setContentView(twiter);
 //            // Simplest usage: note that an exception will NOT be thrown
 //            // if there is an error loading this page (see below).
 //            twiter.loadUrl("http://www.example.com");
@@ -123,31 +123,31 @@ public class Please extends AppCompatActivity
             //Uri uri = Uri.parse("https://twitter.com/?lang=en");
             //Intent intent = new Intent(Intent.ACTION_VIEW, uri);
            // startActivity(intent);
-            // Handle the camera action
-//        } else if (id == R.id.nav_gallery) {
-//
-//        } else if (id == R.id.nav_manage) {
-// \
-//        } else if (id == R.id.nav_share) {
-//
-//        } else if (id == R.id.nav_send) {
-            getWindow().requestFeature(Window.FEATURE_PROGRESS);
+             //Handle the camera action
+            if (id == R.id.nav_aboutus) {
 
-            twiter.getSettings().setJavaScriptEnabled(true);
+        } else if (id == R.id.nav_meettheteam) {
 
-            final Activity activity = this;
-            twiter.setWebChromeClient(new WebChromeClient() {
-                public void onProgressChanged(WebView view, int progress) {
-                    // Activities and WebViews measure progress with different scales.
-                    // The progress meter will automatically disappear when we reach 100%
-                    activity.setProgress(progress * 1000);
-                }
-            });
-            twiter.setWebViewClient(new WebViewClient() {
-                public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
-                    Toast.makeText(activity, "Oh no! " + description, Toast.LENGTH_SHORT).show();
-                }
-            });
+        } else if (id == R.id.nav_references) {
+
+// //       } else if (id == R.id.nav_send) {
+//            getWindow().requestFeature(Window.FEATURE_PROGRESS);
+//
+//            twiter.getSettings().setJavaScriptEnabled(true);
+//
+//            final Activity activity = this;
+//            twiter.setWebChromeClient(new WebChromeClient() {
+//                public void onProgressChanged(WebView view, int progress) {
+//                    // Activities and WebViews measure progress with different scales.
+//                    // The progress meter will automatically disappear when we reach 100%
+//                    activity.setProgress(progress * 1000);
+//                }
+//            });
+//            twiter.setWebViewClient(new WebViewClient() {
+//                public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
+//                    Toast.makeText(activity, "Oh no! " + description, Toast.LENGTH_SHORT).show();
+//                }
+//            });
 
             //webview.loadUrl("http://developer.android.com/");
 
