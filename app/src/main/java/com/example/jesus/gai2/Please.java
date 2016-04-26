@@ -9,18 +9,21 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.net.Uri;
-import android.content.Intent;
+import android.webkit.WebView;
+import android.view.Window;
+import android.app.Activity;
+import android.webkit.WebChromeClient;
+import android.webkit.WebViewClient;
+import android.widget.Toast;
 
 //import android.webkit.PermissionRequest;
 
 public class Please extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
-        //requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_please);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -75,15 +78,14 @@ public class Please extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_twitter) {
-
-            Uri uri = Uri.parse("http://www.example.com");
-            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-            startActivity(intent);
-              //WebView twiter = new WebView(this);
-              //setContentView(twiter);
+//            Uri uri = Uri.parse("http://www.example.com");
+//            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+//            startActivity(intent);
+              WebView twiter = new WebView(this);
+              setContentView(twiter);
 //            // Simplest usage: note that an exception will NOT be thrown
 //            // if there is an error loading this page (see below).
-             // twiter.loadUrl("http://www.example.com");
+//            twiter.loadUrl("http://www.example.com");
 
             // OR, you can also load from an HTML string:
 //            String summary = "<html><body>You scored <b>192</b> points.</body></html>";
@@ -124,27 +126,26 @@ public class Please extends AppCompatActivity
 //        } else if (id == R.id.nav_share) {
 //
 //        } else if (id == R.id.nav_send) {
+            getWindow().requestFeature(Window.FEATURE_PROGRESS);
 
-           // getWindow().requestFeature(Window.FEATURE_NO_TITLE);
+            twiter.getSettings().setJavaScriptEnabled(true);
 
-//            twiter.getSettings().setJavaScriptEnabled(true);
-//
-//            final Activity activity = this;
-//            twiter.setWebChromeClient(new WebChromeClient() {
-//                public void onProgressChanged(WebView view, int progress) {
-//                    // Activities and WebViews measure progress with different scales.
-//                    // The progress meter will automatically disappear when we reach 100%
-//                    activity.setProgress(progress * 1000);
-//                }
-//            });
-//            twiter.setWebViewClient(new WebViewClient() {
-//                public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
-//                    Toast.makeText(activity, "Oh no! " + description, Toast.LENGTH_SHORT).show();
-//                }
-//            });
-//
-//            twiter.loadUrl("http://developer.android.com/");
-//
+            final Activity activity = this;
+            twiter.setWebChromeClient(new WebChromeClient() {
+                public void onProgressChanged(WebView view, int progress) {
+                    // Activities and WebViews measure progress with different scales.
+                    // The progress meter will automatically disappear when we reach 100%
+                    activity.setProgress(progress * 1000);
+                }
+            });
+            twiter.setWebViewClient(new WebViewClient() {
+                public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
+                    Toast.makeText(activity, "Oh no! " + description, Toast.LENGTH_SHORT).show();
+                }
+            });
+
+            //webview.loadUrl("http://developer.android.com/");
+
 
         }
 

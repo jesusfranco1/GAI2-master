@@ -5,13 +5,13 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/splash_image"
-        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Rising Business"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity
             android:name=".Please"
-            android:label="@string/app_name"
+            android:label="Rising Business"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="com.example.jesus.gai2.MAINACTIVITY" />
@@ -21,7 +21,7 @@
         </activity>
 
         <activity android:name=".SlashScreen"
-            android:icon="@mipmap/splash_image">
+            android:icon="@mipmap/ic_launcher">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
